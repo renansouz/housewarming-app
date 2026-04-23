@@ -5,7 +5,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Chá de Casa Nova - Renan & Nicole",
   description: "Escolha um presente para nos ajudar a montar nosso novo lar!",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1", 
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
