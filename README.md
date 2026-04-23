@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏠 Housewarming Registry
 
-## Getting Started
+A minimalist, high-contrast, bilingual gift registry application. Built with **Next.js** and **Supabase**, this project focus on providing a clean, "above-the-fold" experience for friends and family to contribute to a new home.
 
-First, run the development server:
+## 🚀 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This app was developed to solve the complexity of traditional gift platforms. It offers a direct approach where guests can choose gifts and contribute via PIX or international methods (Wise/PayPal). The project has evolved from a static prototype to a **Full-Stack** application with real-time database persistence.
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** Supabase (PostgreSQL)
+- **Icons:** Lucide React
+- **i18n:** Custom React Context implementation
+
+## 🎯 Key Features
+
+- **High-Contrast UI:** Maximum legibility with a clean, professional aesthetic.
+- **Bilingual Engine:** Instant PT/EN toggle with no page reload.
+- **Real-time Progress:** Live progress bars synced with the database.
+- **Flexible Contributions:** Support for full funding or custom partial amounts.
+- **Atomic Updates:** PostgreSQL RPC functions to ensure data integrity during contributions.
+
+## ⚙️ Environment Setup
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Environment Setup
+```
+# Install dependencies
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Run the development server
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗺 Future Roadmap
 
-## Learn More
+### Phase 1: Admin Dashboard
+Implementation of a secure `/admin` route to manage gifts, edit values, and track contributions privately without manual database entry.
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 2: Dynamic PIX Integration
+Integration with a PIX API to generate dynamic QR Codes and "Copy & Paste" payloads containing the exact contribution amount to eliminate manual entry errors.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Phase 3: Payment Gateway & Split
+Full integration with a payment processor (Stripe or Mercado Pago) to handle automated transactions and implement a **1% platform fee** through payment splitting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Phase 4: Multi-tenant SaaS
+Scaling the architecture to support multiple independent users, enabling the creation of unique registries under custom URLs (e.g., `/event/user-slug`) with a complete host onboarding flow.
