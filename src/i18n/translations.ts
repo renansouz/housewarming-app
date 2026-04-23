@@ -3,6 +3,7 @@ export type Language = 'pt' | 'en';
 export interface TranslationContent {
   title: string;
   subtitle: string;
+  description: string; 
   days: string;
   hours: string;
   minutes: string;
@@ -16,6 +17,14 @@ export interface TranslationContent {
   missing: string;
   collected: string;
   yourName: string;
+  yourNamePlaceholder: string; 
+  howMuchLabel: string; 
+  fullAmountLabel: string; 
+  customAmountLabel: string; 
+  paymentMethodLabel: string; 
+  pixKeyLabel: string; 
+  continueBtn: string; 
+  helpingWith: string; 
   paymentMethod: string;
   pixMethod: string;
   intlMethod: string;
@@ -28,12 +37,14 @@ export interface TranslationContent {
   thanksMessage: string;
   backToHome: string;
   errorValue: string;
+  movingIn: string;
 }
 
 export const translations: Record<Language, TranslationContent> = {
   pt: {
     title: "Nosso Chá de Casa Nova",
-    subtitle: "Ajude-nos a montar nosso novo lar com carinho.",
+    subtitle: "Ajude-nos a montar nosso novo lar com carinho",
+    description: "Estamos muito felizes em compartilhar esse momento com você. Criamos este espaço para facilitar a escolha dos presentes e nos ajudar a transformar nossa nova casa em um lar.",
     days: "Dias",
     hours: "Horas",
     minutes: "Minutos",
@@ -47,22 +58,32 @@ export const translations: Record<Language, TranslationContent> = {
     missing: "Falta",
     collected: "Arrecadado",
     yourName: "Seu Nome",
+    yourNamePlaceholder: "Ex: Renan Silva",
+    howMuchLabel: "Quanto deseja contribuir?",
+    fullAmountLabel: "Valor Total",
+    customAmountLabel: "Outro Valor",
+    paymentMethodLabel: "Forma de Pagamento",
+    pixKeyLabel: "Chave PIX (E-mail)",
+    continueBtn: "CONTINUAR",
+    helpingWith: "Você está ajudando com:",
     paymentMethod: "Como deseja contribuir?",
-    pixMethod: "PIX (Brasil)",
-    intlMethod: "Internacional (USD/CAD)",
+    pixMethod: "PIX",
+    intlMethod: "Internacional",
     intlInstructions: "Para transferências internacionais, use Wise ou PayPal para: renanss2005@gmail.com",
-    copyPix: "Copiar Chave PIX",
+    copyPix: "Copiar Chave",
     pixCopied: "Copiado!",
     confirmPayment: "Já realizei o envio",
     goBack: "Voltar",
     thanksTitle: "Muito obrigado!",
-    thanksMessage: "Sua contribuição aquece nosso coração e nos ajuda a realizar esse sonho.",
+    thanksMessage: "Sua contribuição aquece nosso coração.",
     backToHome: "Voltar ao início",
-    errorValue: "O valor não pode ser maior que o restante.",
+    errorValue: "Valor inválido",
+    movingIn: "Tempo para a mudança",
   },
   en: {
     title: "Our Housewarming Party",
-    subtitle: "Help us build our new home with love.",
+    subtitle: "Help us build our new home with love",
+    description: "We are so happy to share this moment with you. We created this space to make it easier to choose gifts and help us turn our new house into a home.",
     days: "Days",
     hours: "Hours",
     minutes: "Minutes",
@@ -76,17 +97,26 @@ export const translations: Record<Language, TranslationContent> = {
     missing: "Missing",
     collected: "Collected",
     yourName: "Your Name",
+    yourNamePlaceholder: "Ex: John Doe",
+    howMuchLabel: "How much do you want to contribute?",
+    fullAmountLabel: "Full Amount",
+    customAmountLabel: "Custom Amount",
+    paymentMethodLabel: "Payment Method",
+    pixKeyLabel: "PIX Key (Email)",
+    continueBtn: "CONTINUE",
+    helpingWith: "You are helping with:",
     paymentMethod: "How would you like to contribute?",
-    pixMethod: "PIX (Brazil Only)",
-    intlMethod: "International (USD/CAD)",
+    pixMethod: "PIX",
+    intlMethod: "Intl.",
     intlInstructions: "For international transfers, use Wise or PayPal to: renanss2005@gmail.com",
-    copyPix: "Copy PIX Key",
+    copyPix: "Copy Key",
     pixCopied: "Copied!",
     confirmPayment: "I've sent the payment",
     goBack: "Back",
     thanksTitle: "Thank you so much!",
-    thanksMessage: "Your contribution warms our hearts and helps us achieve this dream.",
+    thanksMessage: "Your contribution warms our hearts.",
     backToHome: "Back to Home",
-    errorValue: "The value cannot exceed the remaining amount.",
+    errorValue: "Invalid value",
+    movingIn: "Time until moving",
   }
 };

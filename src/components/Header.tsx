@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <h1 className="text-xl font-semibold text-slate-800 tracking-tight">
+        <h1 className="text-lg md:text-xl font-bold text-slate-800 truncate max-w-[200px] md:max-w-none">
           🏠 {t.title}
         </h1>
 
